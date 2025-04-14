@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识点展示视图</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+       .container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+       .center-icon {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #4a90e2;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 0 25px rgba(74, 144, 226, 0.6);
+            z-index: 5;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+       .tech-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+       .tech-logos {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+       .tech-logo {
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+       .html-logo {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="%23E44D26" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>');
+        }
+
+       .css-logo {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="%23264DE4" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-119.3-.3-1.5-16.2 119.5-.3-1.2-16.2-120.2.3-3.2-36.6H306l4.1-47.4H81.7l-3.5-36.3H308z"/></svg>');
+        }
+
+       .knowledge-point {
+            position: absolute;
+            width: 250px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eaeaea;
+            z-index: 6;
+        }
+
+       .point-1 {
+            top: 10%;
+            left: 5%;
+        }
+
+       .point-2 {
+            top: 10%;
+            right: 5%;
+        }
+
+       .point-3 {
+            /* 修改 bottom 值，让元素下移 */
+            bottom: 3%; 
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+       .knowledge-point h3 {
+            margin: 0 0 12px 0;
+            color: #4a90e2;
+            font-size: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #4a90e2;
+        }
+
+       .knowledge-point ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style-type: none;
+        }
+
+       .knowledge-point li {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 15px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+       .knowledge-point li:before {
+            content: "•";
+            color: #4a90e2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center-icon">
+            <div class="tech-title">HTML & CSS</div>
+            <div class="tech-logos">
+                <div class="tech-logo html-logo" title="HTML5"></div>
+                <div class="tech-logo css-logo" title="CSS3"></div>
+            </div>
+        </div>
+
+        <div class="knowledge-point point-1">
+            <h3>HTML基础和HTML5</h3>
+            <ul>
+                <li>HTML标签与属性</li>
+                <li>HTML5多媒体（视频和音频）</li>
+                <li>HTML5图像标签（画布和SVG）</li>
+                <li>HTML5地理定位</li>
+                <li>HTML5菜单</li>
+            </ul>
+        </div>
+
+        <div class="knowledge-point point-2">
+            <h3>CSS基础和CSS3</h3>
+            <ul>
+                <li>CSS选择器</li>
+                <li>CSS样式</li>
+                <li>CSS盒模型与定位</li>
+                <li>CSS3的2D与3D转换</li>
+                <li>CSS3的过渡与动画</li>
+                <li>CSS3新的边框效果</li>
+            </ul>
+        </div>
+
+        <div class="knowledge-point point-3">
+            <h3>JavaScript</h3>
+            <ul>
+                <li>数据类型</li>
+                <li>运算符</li>
+                <li>基础语法</li>
+                <li>BOM对象</li>
+                <li>DOM对象</li>
+                <li>JS特效</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
